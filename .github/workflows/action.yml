@@ -204,7 +204,7 @@ jobs:
     - name: Check install
       run: kyverno-json version
 
-  required:
+  test-required:
     needs:
     - default
     - verify
