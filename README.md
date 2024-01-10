@@ -74,6 +74,7 @@ jobs:
 ```
 
 If you want to install `kyverno-json` from its main version by using `go install` under the hood, you can set `release` as `main`.
+
 Once you do that, `kyverno-json` will be installed via `go install` which means that please ensure that go is installed.
 
 Example of installing `kyverno-json` via `go install`:
