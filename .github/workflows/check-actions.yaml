@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Check actions
+
+permissions: {}
+
+on:
+  pull_request:
+    branches:
+    - 'main'
+    - 'release*'
+
+jobs:
+  required:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+    - name: Ensure SHA pinned actions
+      uses: zgosalvez/github-actions-ensure-sha-pinned-actions@ba37328d4ea95eaf8b3bd6c6cef308f709a5f2ec # v3.0.3
